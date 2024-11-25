@@ -1,0 +1,335 @@
+    /* Reset beberapa gaya dasar */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    @font-face {
+        font-family: 'Sigmar';
+        src: url('font/Sigmar/Sigmar.ttf') format('truetype'),
+             url('font/Sigmar/Sigmar.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'Sour Gummy';
+        src: url('font/Sour_Gummy/static/SourGummy-Light.ttf') format('truetype'),
+             url('font/Sour_Gummy/static/SourGummy-Light.ttf') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background: linear-gradient(to bottom, #9adfeb, #ffffff); /* Langit biru dan putih */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Kontainer utama */
+    .container {
+        position: relative;
+        background-image: url("background.jpg");
+        background-size: cover;
+        width: 450px;
+
+  /* Ukuran fixed untuk mobile */
+        height: 100%; /* Ukuran fixed untuk mobile */
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* Animasi untuk gambar 1 */
+    .image-1 {
+        position: absolute;
+        width: 100%;
+        top: -100%;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: slideDown 1s forwards;
+    }
+
+    @keyframes slideDown {
+        to {
+            top: 0;
+        }
+    }
+
+    /* Animasi untuk gambar 2 */
+    .image-2 {
+        position: absolute;
+        width: 130px;
+        top: 3px;
+        animation: moveLeftRight 3s ease-in-out infinite;
+    }
+
+    @keyframes moveLeftRight {
+        0% {
+            left: 10px;
+        }
+        50% {
+            left: 20px;
+        }
+        100% {
+            left: 10px;
+        }
+    }
+
+    /* Animasi untuk gambar 3 */
+    .image-3 {
+        position: absolute;
+        width: 150px;
+        top: 3px;
+        animation: moveRightLeft 3s ease-in-out infinite;
+    }
+
+    @keyframes moveRightLeft {
+        0% {
+            right: 0px;
+        }
+        50% {
+            right: 10px;
+        }
+        100% {
+            right: 0px;
+        }
+    }
+
+    /* Animasi untuk gambar 4 */
+    .image-4 {
+        position: absolute;
+        width: 280px;
+        top: 28%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: zoomIn 2s forwards;
+    }
+
+    @keyframes zoomIn {
+        from {
+            transform: translate(-50%, -50%) scale(0);
+        }
+        to {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+
+    /* Animasi untuk gambar 5 */
+    .image-5 {
+        position: absolute;
+        width: 20%;
+        left: -15%;
+        top: 45%;
+        transform: translateY(-50%);
+        animation: slideInLeft 3s forwards;
+    }
+
+    @keyframes slideInLeft {
+        to {
+            left: 0%;
+        }
+    }
+
+    /* Animasi untuk gambar 6 */
+    .image-6 {
+        position: absolute;
+        width: 15%;
+        right: -15%;
+        top: 45%;
+        transform: translateY(-50%);
+        animation: slideInRight 3s forwards;
+    }
+
+    @keyframes slideInRight {
+        to {
+            right: 0%;
+        }
+    }
+
+    /* Animasi untuk gambar 7 */
+    .image-7 {
+        position: absolute;
+        width: 40%;
+        left: -50%;
+        bottom: -10px;
+        animation: slideInLeftBung 3s forwards, swingLeft 6s ease-in-out infinite;
+        transform-origin: bottom;
+    }
+
+    @keyframes slideInLeftBung {
+        to {
+            left: -10%;
+        }
+    }
+
+    @keyframes swingLeft {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(10deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    /* Animasi untuk gambar 8 */
+    .image-8 {
+        position: absolute;
+        width: 40%;
+        right: -50%;
+        bottom: -10px;
+        animation: slideInRightBung 3s forwards, swingRigth 6s ease-in-out infinite;
+        transform-origin: bottom;
+    }
+
+    @keyframes slideInRightBung {
+        to {
+            right: -2%;
+        }
+    }
+
+    @keyframes swingRigth {
+        0% {
+            transform: rotate(10deg);
+        }
+        50% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(10deg);
+        }
+    }
+
+    /* Animasi untuk gambar 9 */
+    .image-9 {
+        position: absolute;
+        width: 100%;
+        bottom: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: slideUp 3s forwards;
+    }
+
+    @keyframes slideUp {
+        to {
+            bottom: 0px;
+        }
+    }
+
+
+    /* Teks */
+
+    .text-container h1 {
+        font-size: 45px;  /* Ukuran font tetap proporsional */
+        font-family: 'Sigmar', sans-serif;
+        font-weight: normal;
+        margin-top: 30%;
+        text-align: center;
+        color: rgb(255, 152, 0);
+    }
+
+    .text-container h3 {
+        font-size: 25px;  /* Ukuran font tetap proporsional */
+        font-family: 'Sour Gummy', sans-serif;
+        font-weight: normal;
+        color: rgb(48, 121, 179);
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .text-container h5 {
+        font-size: 15px;  /* Ukuran font tetap proporsional */
+        font-family: 'Sour Gummy', sans-serif;
+        font-weight: normal;
+        color: rgb(48, 121, 179);
+        text-align: center;
+    }
+
+    
+
+    /* Memastikan tampilan tidak responsif di desktop */
+    @media (min-width: 1024px) {
+        body {
+            width: 450px;
+
+ /* Menjaga lebar untuk tampilan mobile */
+            margin: 0 auto; /* Centering konten */
+        }
+
+        .container {
+            width: 450px;
+            height: 100%;
+        }
+    }
+
+
+    .tombolcover {
+        position: fixed;
+        bottom: 21%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
+    }
+
+    .tombolbuka{
+        background-color: #e49c00;
+        font-size: 20px;  /* Ukuran font tetap proporsional */
+        font-family: 'Sour Gummy', sans-serif;
+        font-weight: normal;
+        color: white;
+        padding: 5px 20px 5px 20px;
+        border-radius: 25px;
+        border: none;
+    }
+
+    .recipient-name{
+        font-size: 25px;  /* Ukuran font tetap proporsional */
+        font-family: 'Sour Gummy', sans-serif;
+        font-weight: normal;
+        color: rgb(48, 121, 179);
+        text-align: center;
+    }
+
+           /* Menambahkan tombol di bawah */
+    .button-container {
+        position: absolute;
+        bottom: 0px;
+        width: 450px;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 5px;
+        background-color: #007c4d; /* Warna abu-abu gelap */
+    }
+
+    .button-container button {
+        width: 50px;
+        height: 50px;
+        background-color: #007c4d;
+        color: white;
+        border: none;
+        border-radius: 10%;
+        font-size: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .button-container button:hover {
+        background-color: #e2b97a;
+    }

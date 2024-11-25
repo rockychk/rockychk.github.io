@@ -1,0 +1,529 @@
+    /* Reset beberapa gaya dasar */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    @font-face {
+        font-family: 'Sigmar';
+        src: url('font/Sigmar/Sigmar.ttf') format('truetype'),
+             url('font/Sigmar/Sigmar.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'Sour Gummy';
+        src: url('font/Sour_Gummy/static/SourGummy-Light.ttf') format('truetype'),
+             url('font/Sour_Gummy/static/SourGummy-Light.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background: linear-gradient(to bottom, #9adfeb, #ffffff); /* Langit biru dan putih */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Kontainer utama */
+    .container {
+        position: relative;  /* Menjamin kontainer menjadi referensi untuk posisi absolute tombol */
+        background-image: url("../background.jpg");
+        background-size: cover;
+        width: 450px;
+        height: 100%;  /* Ukuran fixed untuk mobile */
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+  /* Ukuran fixed untuk mobile */
+        height: 100%; /* Ukuran fixed untuk mobile */
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* Animasi untuk gambar 1 */
+    .image-1 {
+        position: absolute;
+        width: 100%;
+        top: -100%;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: slideDown 1s forwards;
+    }
+
+    @keyframes slideDown {
+        to {
+            top: 0;
+        }
+    }
+
+    /* Animasi untuk gambar 2 */
+    .image-2 {
+        position: absolute;
+        width: 150px;
+        top: 8px;
+        animation: moveLeftRight 3s ease-in-out infinite;
+    }
+
+    @keyframes moveLeftRight {
+        0% {
+            left: 10px;
+        }
+        50% {
+            left: 20px;
+        }
+        100% {
+            left: 10px;
+        }
+    }
+
+    /* Animasi untuk gambar 3 */
+    .image-3 {
+        position: absolute;
+        width: 180px;
+        top: 8px;
+        animation: moveRightLeft 3s ease-in-out infinite;
+    }
+
+    @keyframes moveRightLeft {
+        0% {
+            right: 0px;
+        }
+        50% {
+            right: 10px;
+        }
+        100% {
+            right: 0px;
+        }
+    }
+
+    /* Animasi untuk gambar 4 */
+    .image-4 {
+        position: absolute;
+        width: 280px;
+        top: 28%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: zoomIn 2s forwards;
+    }
+
+    @keyframes zoomIn {
+        from {
+            transform: translate(-50%, -50%) scale(0);
+        }
+        to {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+
+    /* Animasi untuk gambar 5 */
+    .image-5 {
+        position: absolute;
+        width: 20%;
+        left: -15%;
+        top: 45%;
+        transform: translateY(-50%);
+        animation: slideInLeft 3s forwards;
+    }
+
+    @keyframes slideInLeft {
+        to {
+            left: 0%;
+        }
+    }
+
+    /* Animasi untuk gambar 6 */
+    .image-6 {
+        position: absolute;
+        width: 15%;
+        right: -15%;
+        top: 45%;
+        transform: translateY(-50%);
+        animation: slideInRight 3s forwards;
+    }
+
+    @keyframes slideInRight {
+        to {
+            right: 0%;
+        }
+    }
+
+    /* Animasi untuk gambar 7 */
+    .image-7 {
+        position: absolute;
+        width: 40%;
+        left: -50%;
+        bottom: 40px;
+        animation: slideInLeftBung 3s forwards, swingLeft 6s ease-in-out infinite;
+        transform-origin: bottom;
+    }
+
+    @keyframes slideInLeftBung {
+        to {
+            left: -10%;
+        }
+    }
+
+    @keyframes swingLeft {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(10deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    /* Animasi untuk gambar 8 */
+    .image-8 {
+        position: absolute;
+        width: 40%;
+        right: -50%;
+        bottom: 40px;
+        animation: slideInRightBung 3s forwards, swingRigth 6s ease-in-out infinite;
+        transform-origin: bottom;
+    }
+
+    @keyframes slideInRightBung {
+        to {
+            right: -2%;
+        }
+    }
+
+    @keyframes swingRigth {
+        0% {
+            transform: rotate(10deg);
+        }
+        50% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(10deg);
+        }
+    }
+
+    /* Animasi untuk gambar 9 */
+    .image-9 {
+        position: absolute;
+        width: 100%;
+        bottom: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: slideUp 3s forwards;
+    }
+
+    @keyframes slideUp {
+        to {
+            bottom: 60px;
+        }
+    }
+
+    
+
+    .recipient-name{
+        position: relative;
+        font-size: 25px;  /* Ukuran font tetap proporsional */
+        font-family: 'Sour Gummy', sans-serif;
+        font-weight: normal;
+        color: rgb(48, 121, 179);
+        text-align: center;
+        z-index: 9999;
+    }
+
+
+    /* Teks */
+
+    .text-container h1 {
+        font-size: 45px;  /* Ukuran font tetap proporsional */
+        font-family: 'Sigmar', sans-serif;
+        font-weight: normal;
+        margin-top: 30%;
+        text-align: center;
+        color: rgb(255, 152, 0);
+    }
+
+    .text-container h3 {
+        font-size: 25px;  /* Ukuran font tetap proporsional */
+        font-family: 'Sour Gummy', sans-serif;
+        font-weight: normal;
+        color: rgb(48, 121, 179);
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .text-container h5 {
+        font-size: 15px;  /* Ukuran font tetap proporsional */
+        font-family: 'Sour Gummy', sans-serif;
+        font-weight: normal;
+        color: rgb(48, 121, 179);
+        text-align: center;
+    }
+
+    /* TEKS CONTAINER 1 */
+
+    
+    .text-container1 {
+        position: relative;
+        margin-top: 30%;
+        font-weight: normal;
+        text-align: center;
+        z-index: 999;
+        margin-bottom: -10px;
+    }
+    
+    .text-container1 h1 {
+        font-size: 45px;  /* Ukuran font tetap proporsional */
+        font-family: 'Sigmar', sans-serif;
+        font-weight: normal;
+        margin-top: 30%;
+        text-align: center;
+        color: rgb(255, 152, 0);
+    }
+
+    .text-container1 h3 {
+        font-size: 25px;  /* Ukuran font tetap proporsional */
+        font-family: 'Sour Gummy', sans-serif;
+        font-weight: normal;
+        color: rgb(48, 121, 179);
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .text-container1 h5 {
+        font-size: 15px;  /* Ukuran font tetap proporsional */
+        font-family: 'Sour Gummy', sans-serif;
+        font-weight: normal;
+        color: rgb(48, 121, 179);
+        text-align: center;
+    }
+
+        /* TEKS CONTAINER 2 */
+
+    .text-container2 {
+        position: relative;
+        margin-top: 30%;
+        font-weight: normal;
+        text-align: center;
+        z-index: 999;
+        margin-bottom: -10px;
+    }
+    
+    .text-container2 h1 {
+        font-size: 60px;  /* Ukuran font tetap proporsional */
+        font-family: 'Sigmar';
+        color: rgb(48, 121, 179);
+        margin-bottom: -10px;
+    }
+
+    .text-container2 h2 {
+        font-size: 28px;  /* Ukuran font tetap proporsional */
+        font-family: 'Sour Gummy';
+        color: rgb(255, 152, 0);
+    }
+
+    .text-container2 h3 {
+        font-size: 20px;  /* Ukuran font tetap proporsional */
+        font-family: 'Sour Gummy';
+        color: rgb(48, 121, 179);
+        margin-bottom: -10px;
+    }
+
+    .text-container2 h4 {
+        font-size: 18px;  /* Ukuran font tetap proporsional */
+        font-family: 'Sour Gummy';
+        color: rgb(48, 121, 179);
+    }
+
+    .text-container2 h5 {
+        font-size: 14px;  /* Ukuran font tetap proporsional */
+        font-family: 'Sour Gummy';
+        color: rgb(22, 22, 22);
+        margin-bottom: 200px;
+    }
+
+    
+
+    /* Memastikan tampilan tidak responsif di desktop */
+    @media (min-width: 1024px) {
+        body {
+            width: 450px;
+
+ /* Menjaga lebar untuk tampilan mobile */
+            margin: 0 auto; /* Centering konten */
+        }
+
+        .container {
+            width: 450px;
+            height: 100%;
+        }
+    }
+
+
+           /* Menambahkan tombol di bawah */
+    .button-container {
+        position: absolute;
+        bottom: 0px;
+        width: 450px;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 5px;
+        background-color: #007c4d; /* Warna abu-abu gelap */
+    }
+
+    .button-container button {
+        width: 50px;
+        height: 50px;
+        background-color: #007c4d;
+        color: white;
+        border: none;
+        border-radius: 10%;
+        font-size: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .button-container button:hover {
+        background-color: #e2b97a;
+    }
+
+/* Posisi tombol audio kontrol secara default (desktop) */
+.audio-controls {
+    position: absolute;
+    bottom: 60px;   /* Jarak dari bawah */
+    width: 450px;
+    display: flex;
+    justify-content: space-evenly;
+    left: 45%;
+    z-index: 9990;  /* Pastikan tombol muncul di atas elemen lain */
+}
+
+@media (max-width: 1024px) {
+    .audio-controls {
+        position: absolute;
+        bottom: 60px;   /* Jarak dari bawah */
+        width: 450px;
+        display: flex;
+        justify-content: space-evenly;
+        left: 45%;
+        z-index: 9990;  /* Pastikan tombol muncul di atas elemen lain */
+    }
+}
+
+/* Styling tombol audio */
+.audio-controls button {
+    background-color: rgba(0, 124, 77, 0); /* Transparan */
+    color: #007c4d;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+/* Efek hover pada tombol audio */
+.audio-controls button:hover {
+    color: #e2b97a;  /* Warna ketika hover */
+}
+
+.audio-controls button:hover {
+    color: rgba(255, 212, 71, 0.6);
+}
+
+.date-container {
+    display: flex;
+    align-items: center;
+    font-family: 'Sour Gummy';
+    color: #F7941D; /* Warna oranye */
+    padding-left: 90px;
+    margin-bottom: -130px;
+  }
+  
+  .date-number {
+    font-size: 48px;
+    margin-right: 10px;
+  }
+  
+  .date-details {
+    text-align: left;
+    margin-right: 10px; /* Spasi sebelum separator */
+  }
+  
+  .day {
+    font-size: 18px;
+    margin-bottom: -10px;
+  }
+  
+  .month-year {
+    font-size: 18px;
+  }
+  
+  .separator {
+    width: 2px;
+    height: 35px; /* Tinggi garis pembatas */
+    background-color: #F7941D; /* Warna oranye */
+    margin: 0 10px; /* Spasi di kiri dan kanan separator */
+  }
+  
+  .time {
+    font-size: 18px;    
+    margin-bottom: -10px;
+  }
+
+  .selesai {
+    font-size: 18px;    
+  }
+  
+  
+/* COUNTDOWN */
+
+  #countdown {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    bottom: 25%;
+    margin-left: 75px;
+    z-index: 9999;
+}
+
+.time-box {
+    text-align: center;        
+    font-family: 'Sour Gummy', sans-serif;
+    padding: 5px;
+    background-color: #F7941D;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 60px;
+}
+
+.time-value {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.time-label {
+    font-size: 12px;
+    color: #ffffff;
+}
+
+
