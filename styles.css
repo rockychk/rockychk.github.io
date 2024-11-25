@@ -38,21 +38,19 @@
         height: 100%;
     }
 
-    /* Kontainer utama */
-    .container {
-        position: relative;
-        background-image: url("background.jpg");
-        background-size: cover;
-        width: 450px;
-
-  /* Ukuran fixed untuk mobile */
-        height: 100%; /* Ukuran fixed untuk mobile */
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
+/* Kontainer utama */
+.container {
+    position: relative;
+    background-image: url("background.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
     /* Animasi untuk gambar 1 */
     .image-1 {
@@ -262,22 +260,520 @@
         text-align: center;
     }
 
-    
-
-    /* Memastikan tampilan tidak responsif di desktop */
-    @media (min-width: 1024px) {
-        body {
-            width: 450px;
-
- /* Menjaga lebar untuk tampilan mobile */
-            margin: 0 auto; /* Centering konten */
-        }
-
-        .container {
-            width: 450px;
-            height: 100%;
-        }
+/* Memastikan tampilan responsif di desktop */
+@media (min-width: 344px) {
+    .container {
+        max-width: 344px;
     }
+    
+    .text-container h1 {
+        font-size: 55px;  /* Ukuran font tetap proporsional */
+    }
+
+    .text-container h3 {
+        font-size: 25px;  /* Ukuran font tetap proporsional */
+    }
+
+    .text-container h5 {
+        font-size: 18px;  /* Ukuran font tetap proporsional */
+    }
+
+    .image-4 {
+        width: 350px;
+    }
+
+    .tombolcover {
+        margin-bottom: 50px;
+    }
+
+    .tombolcover .recipient-name{
+        font-size: 28px;  /* Ukuran font tetap proporsional */
+    }
+    
+    .tombolcover .tombolbuka{
+        font-size: 15px;  /* Ukuran font tetap proporsional */
+        padding: 5px 20px 5px 20px;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 375px) {
+    .container {
+        max-width: 375px;
+    }
+    
+    .text-container h1 {
+        font-size: 55px;  /* Ukuran font tetap proporsional */
+    }
+
+    .text-container h3 {
+        font-size: 25px;  /* Ukuran font tetap proporsional */
+    }
+
+    .text-container h5 {
+        font-size: 18px;  /* Ukuran font tetap proporsional */
+    }
+
+    .image-2 {
+        width: 120px;
+    }
+
+    .image-3 {
+        width: 150px;
+    }
+
+    .image-4 {
+        width: 350px;
+    }
+
+    .tombolcover {
+        margin-bottom: 1vh;
+    }
+
+    .tombolcover .recipient-name{
+        font-size: 28px;  /* Ukuran font tetap proporsional */
+    }
+    
+    .tombolcover .tombolbuka{
+        font-size: 4vw;  /* Ukuran font tetap proporsional */
+        padding: 5px 20px 5px 20px;
+    }
+}
+
+@media (min-width: 375px) {
+    .container {
+        max-width: 375px;
+    }
+}
+
+@media (min-width: 390px) {
+    .container {
+        max-width: 390px;
+    }
+    .text-container h1 {
+        font-size: 60px;  /* Ukuran font tetap proporsional */
+    }
+
+    .text-container h3 {
+        font-size: 30px;  /* Ukuran font tetap proporsional */
+    }
+
+    .text-container h5 {
+        font-size: 20px;  /* Ukuran font tetap proporsional */
+    }
+
+    .image-4 {
+        width: 350px;
+    }
+
+    .tombolcover {
+        margin-bottom: 12%;
+    }
+}
+
+@media (min-width: 412px) and (max-width: 414px) {
+
+    .container {
+        min-width: 412px;
+        max-width: 414px;
+    }
+   
+    .text-container h1 {
+        font-size: 60px;  /* Ukuran font tetap proporsional */
+        margin-top: 0;
+    }
+
+    .text-container h3 {
+        font-size: 30px;  /* Ukuran font tetap proporsional */
+    }
+
+    .text-container h5 {
+        font-size: 20px;  /* Ukuran font tetap proporsional */
+        margin-bottom: 0;
+    }
+
+    .image-4 {
+        width: 350px;
+    }
+
+    .tombolcover {
+        margin-bottom: 85px;
+    }
+
+    .tombolcover .recipient-name{
+        font-size: 30px;  /* Ukuran font tetap proporsional */
+    }
+    
+    .tombolcover .tombolbuka{
+        font-size: 20px;  /* Ukuran font tetap proporsional */
+        padding: 5px 30px 5px 30px;
+    }
+
+}
+
+@media (min-width: 430px) {
+    .container {
+        max-width: 430px;
+    }
+}
+
+@media (min-width: 475px) {
+    .container {
+        max-width: 475px;
+    }
+}
+
+@media (min-width: 540px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .text-container h1 {
+        font-size: 70px;  /* Ukuran font tetap proporsional */
+        margin-top: 70px;
+    }
+
+    .text-container h3 {
+        font-size: 35px;  /* Ukuran font tetap proporsional */
+    }
+
+    .text-container h5 {
+        font-size: 20px;  /* Ukuran font tetap proporsional */
+    }
+
+    .image-2 {
+        width: 160px;
+    }
+
+    .image-3 {
+        width: 190px;
+    }
+
+    .image-4 {
+        width: 350px;
+    }
+
+    .tombolcover {
+        margin-bottom: -0px;
+    }
+
+    .tombolcover .recipient-name{
+        font-size: 28px;  /* Ukuran font tetap proporsional */
+    }
+    
+    .tombolcover .tombolbuka{
+        font-size: 15px;  /* Ukuran font tetap proporsional */
+        padding: 5px 20px 5px 20px;
+    }
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+
+    .text-container h1 {
+        font-size: 70px;  /* Ukuran font tetap proporsional */
+        margin-top: 70px;
+    }
+
+    .text-container h3 {
+        font-size: 35px;  /* Ukuran font tetap proporsional */
+    }
+
+    .text-container h5 {
+        font-size: 20px;  /* Ukuran font tetap proporsional */
+    }
+
+    .image-2 {
+        width: 160px;
+    }
+
+    .image-3 {
+        width: 190px;
+    }
+
+    .image-4 {
+        width: 350px;
+    }
+
+    .tombolcover {
+        margin-bottom: -0px;
+    }
+
+    .tombolcover .recipient-name{
+        font-size: 28px;  /* Ukuran font tetap proporsional */
+    }
+    
+    .tombolcover .tombolbuka{
+        font-size: 15px;  /* Ukuran font tetap proporsional */
+        padding: 5px 20px 5px 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+
+    .text-container h1 {
+        font-size: 90px;  /* Ukuran font tetap proporsional */
+    }
+
+    .text-container h3 {
+        font-size: 40px;  /* Ukuran font tetap proporsional */
+    }
+
+    .text-container h5 {
+        font-size: 20px;  /* Ukuran font tetap proporsional */
+    }
+
+    .image-2 {
+        width: 200px;
+    }
+
+    .image-3 {
+        width: 230px;
+    }
+
+    .image-4 {
+        width: 450px;
+    }
+
+    .tombolcover {
+        margin-bottom: 6%;
+    }
+}
+
+@media (min-width: 820px) and (max-width: 912px) {
+    .container{
+        max-width: 820px;
+        max-width: 853px;
+        max-width: 912px;
+    }
+
+    .text-container h1 {
+        font-size: 120px;  /* Ukuran font tetap proporsional */
+    }
+
+    .text-container h3 {
+        font-size: 50px;  /* Ukuran font tetap proporsional */
+    }
+
+    .text-container h5 {
+        font-size: 30px;  /* Ukuran font tetap proporsional */
+    }
+
+    .image-2 {
+        width: 230px;
+    }
+
+    .image-3 {
+        width: 250px;
+    }
+
+    .image-4 {
+        width: 500px;
+    }
+
+    .tombolcover {
+        margin-bottom: 6%;
+    }
+
+    .tombolcover .recipient-name{
+        font-size: 40px;  /* Ukuran font tetap proporsional */
+    }
+    
+    .tombolcover .tombolbuka{
+        font-size: 25px;  /* Ukuran font tetap proporsional */
+        padding: 5px 40px 5px 40px;
+    }
+}
+
+/* Media Query untuk Mode Mobile (1024px x 1366px) */
+@media (min-width: 1024px) and (min-height: 1366px) {
+    .container {
+        max-width: 1024px;
+        max-height: 1366px;
+        /* Gaya khusus untuk mode mobile */
+    }
+
+    .text-container h1 {
+        font-size: 150px;  /* Ukuran font untuk mobile */
+        margin-top: 50px;
+    }
+
+    .text-container h3 {
+        font-size: 65px;  /* Ukuran font untuk mobile */
+    }
+
+    .text-container h5 {
+        font-size: 35px;  /* Ukuran font untuk mobile */
+    }
+
+    .image-2 {
+        width: 300px;  /* Ukuran gambar untuk mobile */
+    }
+
+    .image-3 {
+        width: 330px;  /* Ukuran gambar untuk mobile */
+    }
+
+    .image-4 {
+        width: 580px;  /* Ukuran gambar untuk mobile */
+    }
+
+    .tombolcover .recipient-name {
+        font-size: 50px;  /* Ukuran font untuk nama penerima di mobile */
+    }
+
+    .tombolcover .tombolbuka {
+        font-size: 35px;  /* Ukuran font untuk tombol di mobile */
+        padding: 5px 50px; /* Padding untuk tombol di mobile */
+        border-radius: 50px;
+    }
+}
+
+/* Media Query untuk Mode Desktop (1024px x 600px) */
+@media (min-width: 1024px) and (min-height: 600px) {
+    .container {
+        max-width: 360px;
+    }
+    
+    .text-container h1 {
+        font-size: 55px;  /* Ukuran font tetap proporsional */
+    }
+
+    .text-container h3 {
+        font-size: 25px;  /* Ukuran font tetap proporsional */
+    }
+
+    .text-container h5 {
+        font-size: 15px;  /* Ukuran font tetap proporsional */
+    }
+
+    .image-2 {
+        width: 100px;  /* Ukuran gambar untuk mobile */
+    }
+
+    .image-3 {
+        width: 130px;  /* Ukuran gambar untuk mobile */
+    }
+
+    .image-4 {
+        width: 280px;  /* Ukuran gambar untuk mobile */
+    }
+
+    .tombolcover {
+        margin-bottom: 0px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tombolcover .recipient-name {
+        font-size: 30px;  /* Ukuran font untuk nama penerima di mobile */
+    }
+
+    .tombolcover .tombolbuka {
+        font-size: 15px;  /* Ukuran font untuk tombol di mobile */
+        padding: 5px 30px; /* Padding untuk tombol di mobile */ 
+        border-radius: 50px;
+    }
+}
+
+@media (min-width: 1280px) and (min-height: 800px)  {
+    
+    .container {
+        max-width: 500px;
+    }
+    
+    .text-container h1 {
+        font-size: 6vw;  /* Ukuran font tetap proporsional */
+    }
+
+    .text-container h3 {
+        font-size: 2.7vw;  /* Ukuran font tetap proporsional */
+    }
+
+    .text-container h5 {
+        font-size: 1.8vw;  /* Ukuran font tetap proporsional */
+    }
+
+    .image-2 {
+        width: 150px;  /* Ukuran gambar untuk mobile */
+    }
+
+    .image-3 {
+        width: 180px;  /* Ukuran gambar untuk mobile */
+    }
+
+    .image-4 {
+        width: 380px;  /* Ukuran gambar untuk mobile */
+    }
+
+    .tombolcover {
+        align-items: center;
+        text-align: center;
+        margin-bottom: -1vh;
+    }
+
+    .tombolcover .recipient-name {
+        font-size: 3vw;   /* Ukuran font untuk nama penerima di mobile */
+    }
+
+    .tombolcover .tombolbuka {
+        font-size: 2vw;  /* Ukuran font untuk tombol di mobile */
+        padding: 5px 30px; /* Padding untuk tombol di mobile */ 
+        border-radius: 50px;
+    }
+}
+
+@media (min-width: 1536px) {
+    
+    .container {
+        max-width: 360px;
+    }
+    
+    .text-container h1 {
+        font-size: 55px;  /* Ukuran font tetap proporsional */
+    }
+
+    .text-container h3 {
+        font-size: 25px;  /* Ukuran font tetap proporsional */
+    }
+
+    .text-container h5 {
+        font-size: 15px;  /* Ukuran font tetap proporsional */
+    }
+
+    .image-2 {
+        width: 100px;  /* Ukuran gambar untuk mobile */
+    }
+
+    .image-3 {
+        width: 130px;  /* Ukuran gambar untuk mobile */
+    }
+
+    .image-4 {
+        width: 280px;  /* Ukuran gambar untuk mobile */
+    }
+
+    .tombolcover {
+        margin-bottom: 0px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tombolcover .recipient-name {
+        font-size: 30px;  /* Ukuran font untuk nama penerima di mobile */
+    }
+
+    .tombolcover .tombolbuka {
+        font-size: 15px;  /* Ukuran font untuk tombol di mobile */
+        padding: 5px 30px; /* Padding untuk tombol di mobile */ 
+        border-radius: 50px;
+    }
+}
+
 
 
     .tombolcover {
@@ -290,7 +786,7 @@
 
     .tombolbuka{
         background-color: #e49c00;
-        font-size: 20px;  /* Ukuran font tetap proporsional */
+        font-size: 15px;  /* Ukuran font tetap proporsional */
         font-family: 'Sour Gummy', sans-serif;
         font-weight: normal;
         color: white;
