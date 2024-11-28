@@ -1,0 +1,1211 @@
+/* Reset beberapa gaya dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --txt-primary: rgb(255, 152, 0);
+    --txt-secondary: rgb(48, 121, 179);
+    --txt-third: #007c4d;
+}
+
+@font-face {
+    font-family: 'Sigmar';
+    src: url('../font/Sigmar/Sigmar.ttf') format('truetype'),
+         url('../font/Sigmar/Sigmar.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sour Gummy';
+    src: url('../font/Sour_Gummy/static/SourGummy-Light.ttf') format('truetype'),
+         url('../font/Sour_Gummy/static/SourGummy-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #9adfeb, #ffffff); /* Langit biru dan putih */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+/* Kontainer utama */
+.container {
+    position: relative;
+    background-image: url("../background.jpg");
+    background-size: cover;
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Animasi untuk gambar 1 */
+.image-1 {
+    position: absolute;
+    width: 100%;
+    top: -100%;
+    left: 50%;
+    opacity: 80%;
+    transform: translateX(-50%);
+    animation: slideDown 1s forwards;
+}
+
+@keyframes slideDown {
+    to {
+        top: 0;
+    }
+}
+
+/* Animasi untuk gambar 2 */
+.image-2 {
+    position: absolute;
+    width: 30%;
+    top: 3px;
+    opacity: 80%;
+    animation: moveLeftRight 3s ease-in-out infinite;
+}
+
+@keyframes moveLeftRight {
+    0% {
+        left: 10px;
+    }
+    50% {
+        left: 20px;
+    }
+    100% {
+        left: 10px;
+    }
+}
+
+/* Animasi untuk gambar 3 */
+.image-3 {
+    position: absolute;
+    width: 35%;
+    top: 3px;
+    opacity: 80%;
+    animation: moveRightLeft 3s ease-in-out infinite;
+}
+
+@keyframes moveRightLeft {
+    0% {
+        right: 0px;
+    }
+    50% {
+        right: 10px;
+    }
+    100% {
+        right: 0px;
+    }
+}
+
+/* Animasi untuk gambar 4 */
+.image-4 {
+    position: absolute;
+    width: 70%;
+    top: 28%;
+    left: 50%;
+    opacity: 80%;
+    transform: translate(-50%, -50%);
+    animation: zoomIn 2s forwards;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Animasi untuk gambar 5 */
+.image-5 {
+    position: absolute;
+    width: 20%;
+    left: -15%;
+    top: 45%;
+    opacity: 80%;
+    transform: translateY(-50%);
+    animation: slideInLeft 3s forwards;
+}
+
+@keyframes slideInLeft {
+    to {
+        left: 0%;
+    }
+}
+
+/* Animasi untuk gambar 6 */
+.image-6 {
+    position: absolute;
+    width: 15%;
+    right: -15%;
+    top: 45%;
+    opacity: 80%;
+    transform: translateY(-50%);
+    animation: slideInRight 3s forwards;
+}
+
+@keyframes slideInRight {
+    to {
+        right: 0%;
+    }
+}
+
+/* Animasi untuk gambar 7 */
+.image-7 {
+    position: absolute;
+    width: 40%;
+    left: -50%;
+    bottom: 40px;
+    opacity: 80%;
+    animation: slideInLeftBung 3s forwards, swingLeft 6s ease-in-out infinite;
+    transform-origin: bottom;
+}
+
+@keyframes slideInLeftBung {
+    to {
+        left: -10%;
+    }
+}
+
+@keyframes swingLeft {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Animasi untuk gambar 8 */
+.image-8 {
+    position: absolute;
+    width: 40%;
+    right: -50%;
+    bottom: 40px;
+    opacity: 80%;
+    animation: slideInRightBung 3s forwards, swingRigth 6s ease-in-out infinite;
+    transform-origin: bottom;
+}
+
+@keyframes slideInRightBung {
+    to {
+        right: -2%;
+    }
+}
+
+@keyframes swingRigth {
+    0% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+/* Animasi untuk gambar 9 */
+.image-9 {
+    position: absolute;
+    width: 100%;
+    bottom: -50%;
+    left: 50%;
+    opacity: 80%;
+    transform: translateX(-50%);
+    animation: slideUp 3s forwards;
+}
+
+@keyframes slideUp {
+    to {
+        bottom: 40px;
+    }
+}
+
+/* Teks */
+
+/* TEXT UNTUK MENU 1 */
+.texthome {
+    position: relative;
+    z-index: 999;
+    text-align: center;
+    top: 35vh;
+}
+
+.texthome h1 {
+    font-size: 15vw; /* Ukuran font tetap proporsional */
+    font-family: 'Sigmar';
+    font-weight: normal;
+    margin-top: 50px;
+    color: var(--txt-primary);
+}
+
+.texthome h3 {
+    font-size: 8vw; /* Ukuran font tetap proporsional */
+    font-family: 'Sour Gummy';
+    font-weight: normal;
+    color: var(--txt-secondary);
+    margin-top: -10px;
+    padding-bottom: 10px;
+}
+
+.texthome h5 {
+    font-size: 4vw; /* Ukuran font tetap proporsional */
+    font-family: 'Sour Gummy';
+    font-weight: normal;
+    color: var(--txt-secondary);
+}
+
+/* TEXT UNTUK MENU 2 */
+.texthome2 {
+    position: relative;
+    margin-top: 30%;
+    font-weight: normal;
+    text-align: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.texthome2 h1 {
+    font-size: 100px;
+    font-family: 'Sigmar';
+    text-align: center;
+    color: var(--txt-secondary);
+    margin-bottom: -10px;
+}
+
+.texthome2 h2 {
+    font-size: 25px;
+    font-family: 'Sour Gummy';
+    color: var(--txt-primary);
+    text-align: center;
+    margin-bottom: -10px;
+}
+
+.texthome2 h3 {
+    font-size: 20px;
+    font-family: 'Sour Gummy';
+    color: var(--txt-secondary);
+    text-align: center;
+}
+
+.texthome2 h4 {
+    font-size: 18px;
+    font-family: 'Sour Gummy';
+    color: var(--txt-secondary);
+    text-align: center;
+    margin-top: -25%;
+}
+
+.texthome2 h5 {
+    font-size: 16px;
+    font-family: 'Sour Gummy';
+    color: #0c0c0c;
+    text-align: center;
+}
+
+.tombolcover {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+.tombolbuka {
+    background-color: var(--txt-primary);
+    font-size: 5vw; /* Ukuran font tetap proporsional */
+    font-family: 'Sour Gummy';
+    font-weight: normal;
+    color: white;
+    padding: 5px 20px 5px 20px;
+    border-radius: 25px;
+    border: none;
+}
+
+#recipient-name {
+    font-size: 6vw; /* Ukuran font tetap proporsional */
+    font-family: 'Sour Gummy';
+    font-weight: normal;
+    color: var(--txt-secondary);
+    text-align: center;
+}
+
+/*STYLE TEKS HARI TANGGAL LOKASI ACARA */
+.date-container {
+    display: flex;
+    position: static;
+    justify-content: center;
+    text-align: center;
+    color: var(--txt-primary); /* Warna oranye */
+    font-family: 'Sour Gummy';
+}
+
+.date-number {
+    font-size: 48px;
+    margin-right: 10px;
+    margin-top: -10px;
+}
+
+.date-details {
+    text-align: left;
+    margin-right: 10px; /* Spasi sebelum separator */
+}
+
+.day {
+    font-size: 18px;
+}
+
+.month-year {
+    font-size: 18px;
+}
+      
+.separator {
+    width: 2px;
+    height: 50px; /* Tinggi garis pembatas */
+    background-color: #F7941D; /* Warna oranye */
+    margin: 0 10px; /* Spasi di kiri dan kanan separator */
+}
+      
+.time {
+    font-size: 18px;
+}
+      
+.selesai {
+    font-size: 18px;
+}
+
+
+/* CountDown */
+#countdown {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    bottom: -2%;
+    z-index: 10;
+}
+
+.time-box {
+    text-align: center;
+    font-family: 'Sour Gummy';
+    padding: 5px;
+    background-color: #F7941D;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 60px;
+}
+
+.time-value {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.time-label {
+    font-size: 12px;
+    color: #ffffff;
+}
+
+/* TEXT UNTUK MENU 3 */
+.menu3 {
+    position: relative;
+    z-index: 999;
+    text-align: center;
+    top: 35vh;
+}
+
+.menu3 h1 {
+    font-size: 6vw;  /* Ukuran font tetap proporsional */
+    font-family: 'Sigmar';
+    font-weight: normal;
+    color: var(--txt-primary);
+}
+
+.menu3 h5 {
+    font-size: 4vw;  /* Ukuran font tetap proporsional */
+    font-family: 'Sour Gummy';
+    font-weight: normal;
+    color: var(--txt-secondary);
+}
+
+/* Menambahkan style untuk iframe dengan kelas 'map-iframe' */
+.menu3-map {
+    border: 5px solid tomato;  /* Menambahkan border berwarna tomato */
+    border-radius: 10px;        /* Memberikan sudut border yang melengkung */
+    width: 90%;                /* Mengatur lebar iframe agar 100% dari kontainer */
+    height: 30vh;                /* Mengatur tinggi iframe menjadi 80% dari kontainer */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  /* Memberikan bayangan */
+    pointer-events: none;       /* Menonaktifkan interaksi dengan */
+}
+
+/* Posisi tombol audio kontrol secara default (desktop) */
+.audio-controls {
+    display: flex;        
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+    justify-content: space-evenly;
+    z-index: 9990;  /* Pastikan tombol muncul di atas elemen lain */
+}
+
+/* Styling tombol audio */
+.audio-controls button {
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--txt-third);
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.audio-controls button:hover {
+    color: rgba(255, 212, 71, 0.6);
+}
+
+/* Tombol NAVIGASI di bawah */
+.button-container {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+    background-color: #007c4d; /* Warna abu-abu gelap */
+}
+
+/* Mengubah warna ikon menjadi putih */
+.icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(1) grayscale(1) contrast(100%);
+    margin: 10px;
+
+}
+
+.button-container button {
+    background-color: #007c4d;
+    border: none;
+    border-radius: 10%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #e2b97a;
+}
+
+.tombolcover {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+.tombolbuka {
+    background-color: var(--txt-primary);
+    font-size: 5vw;  /* Ukuran font tetap proporsional */
+    font-family: 'Sour Gummy', sans-serif;
+    font-weight: normal;
+    color: white;
+    padding: 5px 20px 5px 20px;
+    border-radius: 25px;
+    border: none;
+}
+    
+    /* MENU 4 */
+    /* AWAL STYLE UNTUK FORM DOA DAN UCAPAN */
+/* Menu 4 */
+.menu4 {
+    position: relative;
+    z-index: 999;
+    text-align: center;
+    top: 35vh;
+}
+
+.menu4 h1 {
+    font-size: 6vw;  /* Ukuran font tetap proporsional */
+    font-family: 'Sigmar';
+    font-weight: normal;
+    color: var(--txt-primary);
+}
+
+.menu4 h5 {
+    font-size: 4vw;  /* Ukuran font tetap proporsional */
+    font-family: 'Sour Gummy';
+    font-weight: normal;
+    color: var(--txt-secondary);
+}
+
+.ucapan-container {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 800px;  /* Menyembunyikan scrollbar namun tetap bisa scroll */
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Sour Gummy';
+    font-weight: normal;
+    scrollbar-width: thin; /* Hanya menampilkan scrollbar tipis (untuk Firefox) */
+    scrollbar-color: transparent transparent; /* Menyembunyikan scrollbar (untuk Firefox) */
+}
+
+.ucapan-container::-webkit-scrollbar {
+    width: 0px; /* Menyembunyikan scrollbar untuk Webkit browser (Chrome, Safari, Edge) */
+}
+
+.ucapan-container::-webkit-scrollbar-thumb {
+    background: transparent; /* Menyembunyikan scrollbar thumb */
+}
+
+.ucapan-container::-webkit-scrollbar-track {
+    background: transparent; /* Menyembunyikan track scrollbar */
+}
+
+.ucapan-item {
+    align-items: center;
+    justify-content: center;
+}
+
+.ucapan-item strong {
+    color: var(--txt-secondary);
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    width: 80%;
+    max-width: 400px;
+}
+
+.form-label {
+    font-size: 4vw;  /* Ukuran font tetap proporsional */
+    font-family: 'Sour Gummy';
+    font-weight: normal;
+    color: var(--txt-secondary);
+}
+
+.alert-box {
+    position: fixed;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    text-align: center;
+    width: 60%;
+    max-width: 600px;
+    min-width: 200px;
+    z-index: 99999;
+}
+
+.btn-buat-ucapan {
+    background-color: var(--txt-secondary);
+    color: white;
+}
+
+.btn-buat-ucapan:hover {
+    background-color: #006666;
+}
+
+#spinner {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    left: 50%;
+    z-index: 9999;
+}
+
+#btnClosePopup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
+}
+
+#btnClosePopup:hover {
+    color: #007bff;
+}
+
+/* Akhir Style untuk Form Doa dan Ucapan */
+
+    /* MENU 4 */
+    /* AWAL STYLE UNTUK FORM DOA DAN UCAPAN */
+/* Menu 5 */
+.menu6 {
+    position: relative;
+    z-index: 999;
+    text-align: center;
+    top: 35vh;
+    font-size: 3vw;  /* Ukuran font tetap proporsional */
+    font-family: "Sour Gummy";
+    font-weight: normal;
+    color: var(--txt-secondary);
+    padding: 20px;
+}
+
+.gift-card {
+    background: rgba(255, 255, 255, 0.4);
+    color: #915f3e;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    width: 300px;
+  }
+
+  .gift-card-logo-logo {
+    align-self: flex-start;
+    margin-bottom: 20px;
+  }
+
+
+      
+
+    @media screen and (max-width: 320px) and (min-height: 480px)  {
+        .container{
+            width: 320px;
+        }
+        
+        .image-2 {
+            width: 30vw;
+            z-index: 2;
+        }
+        .image-3 {
+            width: 35vw;
+            z-index: 2;
+        }
+        
+        .image-4 {
+            width: 68vw;
+        }
+        
+        .image-5 {
+            width: 20vw;
+        }
+        
+        .image-6 {
+            width: 15vw;
+        }
+        
+        .image-7 {
+            width: 30vw;
+            margin-top: 20vh;
+            margin-left: 4vw;
+        }
+        .image-8 {
+            width: 30vw;
+            margin-top: 20vh;
+            margin-right: 1vw;
+        }
+
+        .texthome h1 {
+            font-size: 15vw;  /* Ukuran font tetap proporsional */
+
+        }
+
+        .texthome h3 {
+            font-size: 7vw;  /* Ukuran font tetap proporsional */
+
+        }
+
+        .texthome h5 {
+            font-size: 4vw;  /* Ukuran font tetap proporsional */
+        }
+
+        .tombolbuka{
+            font-size: 4vw;  /* Ukuran font tetap proporsional */
+            font-weight: bold;
+        }
+    
+        #recipient-name{
+            font-size: 15px;  /* Ukuran font tetap proporsional */
+        }
+    }
+
+    @media screen and (min-width: 768px)  {
+        .container{
+            width: 768px;
+        }
+
+        .texthome h1 {
+            position: relative;
+            font-size: 120px;  /* Ukuran font tetap proporsional */
+        }
+
+        .texthome h3 {
+            font-size: 65px;  /* Ukuran font tetap proporsional */
+
+        }
+
+        .texthome h5 {
+            font-size: 35px;  /* Ukuran font tetap proporsional */
+        }
+
+        .tombolbuka{
+            font-size: 40px;  /* Ukuran font tetap proporsional */
+        }
+    
+        #recipient-name{
+            font-size: 48px;  /* Ukuran font tetap proporsional */
+        }
+
+        .texthome2 h1 {
+            font-size: 180px;  /* Ukuran font tetap proporsional */
+        }
+
+        .texthome2 h2 {
+            font-size: 50px;  /* Ukuran font tetap proporsional */
+            margin-top: -60px;
+        }
+
+        .texthome2 h3 {
+            font-size: 40px;  /* Ukuran font tetap proporsional */
+        }
+
+        .texthome2 h4 {
+            font-size: 35px;  /* Ukuran font tetap proporsional */
+            margin-top: -220px;
+        }
+
+        .texthome2 h5 {
+            font-size: 30px;  /* Ukuran font tetap proporsional */
+        }   
+        
+        /*STYLE TEKS HARI TANGGAL LOKASI ACARA */
+        .date-number {
+            font-size: 100px;
+            margin-right: 10px;
+            margin-top: -30px;
+          }
+          
+          .day, .time  {
+            font-size: 40px;
+            margin-bottom: -20px;
+          }
+          
+          .month-year, .selesai {
+            font-size: 40px;
+          }
+          
+          .separator {
+            width: 4px;
+            height: 100px; /* Tinggi garis pembatas */
+            background-color: #F7941D; /* Warna oranye */
+            margin: 0 10px; /* Spasi di kiri dan kanan separator */
+          }    
+
+        .time-box {
+            text-align: center;
+            font-family: 'Sour Gummy';
+            padding: 5px;
+            background-color: #F7941D;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100px;
+        }
+        
+            .time-value {
+                font-size: 60px;
+                color: #ffffff;
+        }
+        
+            .time-label {
+                font-size: 20px;
+                color: #ffffff;
+                margin-top: -20px;
+        }
+    }
+
+    @media screen and (min-width: 820px)  {
+        .container{
+            width: 768px;
+        }
+
+        .button-container{
+            max-width: 768px;
+        }
+
+        .texthome h1 {
+            position: relative;
+            font-size: 120px;  /* Ukuran font tetap proporsional */
+        }
+
+        .texthome h3 {
+            font-size: 65px;  /* Ukuran font tetap proporsional */
+
+        }
+
+        .texthome h5 {
+            font-size: 35px;  /* Ukuran font tetap proporsional */
+        }
+
+        .tombolbuka{
+            font-size: 40px;  /* Ukuran font tetap proporsional */
+        }
+    
+        #recipient-name{
+            font-size: 48px;  /* Ukuran font tetap proporsional */
+        }
+
+        .texthome2 h1 {
+            font-size: 180px;  /* Ukuran font tetap proporsional */
+        }
+
+        .texthome2 h2 {
+            font-size: 50px;  /* Ukuran font tetap proporsional */
+            margin-top: -60px;
+        }
+
+        .texthome2 h3 {
+            font-size: 40px;  /* Ukuran font tetap proporsional */
+        }
+
+        .texthome2 h4 {
+            font-size: 35px;  /* Ukuran font tetap proporsional */
+            margin-top: -220px;
+        }
+
+        .texthome2 h5 {
+            font-size: 30px;  /* Ukuran font tetap proporsional */
+        }   
+        
+        /*STYLE TEKS HARI TANGGAL LOKASI ACARA */
+        .date-number {
+            font-size: 100px;
+            margin-right: 10px;
+            margin-top: -30px;
+          }
+          
+          .day, .time  {
+            font-size: 40px;
+            margin-bottom: -20px;
+          }
+          
+          .month-year, .selesai {
+            font-size: 40px;
+          }
+          
+          .separator {
+            width: 4px;
+            height: 100px; /* Tinggi garis pembatas */
+            background-color: #F7941D; /* Warna oranye */
+            margin: 0 10px; /* Spasi di kiri dan kanan separator */
+          }    
+
+        .time-box {
+            text-align: center;
+            font-family: 'Sour Gummy';
+            padding: 5px;
+            background-color: #F7941D;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100px;
+        }
+        
+            .time-value {
+                font-size: 60px;
+                color: #ffffff;
+        }
+        
+            .time-label {
+                font-size: 20px;
+                color: #ffffff;
+                margin-top: -20px;
+        }
+    }
+
+
+    @media screen and (min-width: 1024px) and (max-height: 800px)  {
+        .container{
+            max-width: 400px;
+        }
+
+        .button-container{
+            max-width: 400px;
+        }
+        
+        .texthome{
+            text-align: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .texthome h1 {
+
+            font-size: 5vw;  
+        }
+    
+        .texthome h3 {
+            font-size: 2vw;  
+            margin-bottom: 5px;
+
+        }
+    
+        .texthome h5 {
+            font-size: 1.5vw;  
+            font-family: 'Sour Gummy';
+            font-weight: normal;
+            color: var(--txt-secondary);
+        }
+       
+        .tombolbuka{
+            font-size: 1.5vw; 
+        }
+    
+        #recipient-name{
+            font-size: 2vw;  
+        }
+
+        .texthome2 h1 {
+            font-size: 80px;  /* Ukuran font tetap proporsional */
+        }
+
+        .texthome2 h2 {
+            font-size: 20px;  /* Ukuran font tetap proporsional */
+            margin-top: -60px;
+        }
+
+        .texthome2 h3 {
+            font-size: 15px;  /* Ukuran font tetap proporsional */
+        }
+
+        .texthome2 h4 {
+            font-size: 24px;  /* Ukuran font tetap proporsional */
+            margin-top: -100px;
+        }
+
+        .texthome2 h5 {
+            font-size: 15px;  /* Ukuran font tetap proporsional */
+        }   
+        
+        /*STYLE TEKS HARI TANGGAL LOKASI ACARA */
+        .date-number {
+            font-size: 50px;
+            margin-right: 10px;
+            margin-top: -9px;
+          }
+          
+          .day, .time  {
+            font-size: 25px;
+            margin-bottom: -20px;
+          }
+          
+          .month-year, .selesai {
+            font-size: 25px;
+          }
+          
+          .separator {
+            width: 4px;
+            height: 60px; /* Tinggi garis pembatas */
+            background-color: #F7941D; /* Warna oranye */
+            margin: 0 10px; /* Spasi di kiri dan kanan separator */
+          }    
+
+        .time-box {
+            text-align: center;
+            font-family: 'Sour Gummy';
+            padding: 5px;
+            background-color: #F7941D;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 50px;
+        }
+        
+            .time-value {
+                font-size: 30px;
+                color: #ffffff;
+        }
+        
+            .time-label {
+                font-size: 10px;
+                color: #ffffff;
+                margin-top: -5px;
+        }
+
+        .menu3 h1 {
+            font-size: 3vw;  /* Ukuran font tetap proporsional */
+            font-family: 'Sigmar';
+            font-weight: normal;
+            color: var(--txt-primary);
+        }
+    
+        .menu3 h5 {
+            font-size: 2vw;  /* Ukuran font tetap proporsional */
+            font-family: 'Sour Gummy';
+            font-weight: normal;
+            color: var(--txt-secondary);
+        }
+        
+    }
+
+
+    @media screen and (min-width: 1280px) and (min-height: 720px)  {
+        .container{
+            max-width: 500px;
+        }
+
+        .button-container{
+            max-width: 500px;
+        }
+
+        .texthome{
+            text-align: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .texthome h1 {
+
+            font-size: 70px;  
+        }
+    
+        .texthome h3 {
+            font-size: 30px;  
+            margin-bottom: 5px;
+
+        }
+    
+        .texthome h5 {
+            font-size: 20px;  
+            font-family: 'Sour Gummy';
+            font-weight: normal;
+            color: var(--txt-secondary);
+        }
+       
+        .tombolbuka{
+            font-size: 20px; 
+        }
+    
+        #recipient-name{
+            font-size: 28px;  
+        }
+
+        .texthome2 h1 {
+            font-size: 80px;  /* Ukuran font tetap proporsional */
+        }
+
+        .texthome2 h2 {
+            font-size: 20px;  /* Ukuran font tetap proporsional */
+            margin-top: -60px;
+        }
+
+        .texthome2 h3 {
+            font-size: 15px;  /* Ukuran font tetap proporsional */
+        }
+
+        .texthome2 h4 {
+            font-size: 24px;  /* Ukuran font tetap proporsional */
+            margin-top: -100px;
+        }
+
+        .texthome2 h5 {
+            font-size: 15px;  /* Ukuran font tetap proporsional */
+        }   
+        
+        /*STYLE TEKS HARI TANGGAL LOKASI ACARA */
+        .date-number {
+            font-size: 50px;
+            margin-right: 10px;
+            margin-top: -9px;
+          }
+          
+          .day, .time  {
+            font-size: 25px;
+            margin-bottom: -20px;
+          }
+          
+          .month-year, .selesai {
+            font-size: 25px;
+          }
+          
+          .separator {
+            width: 4px;
+            height: 60px; /* Tinggi garis pembatas */
+            background-color: #F7941D; /* Warna oranye */
+            margin: 0 10px; /* Spasi di kiri dan kanan separator */
+          }    
+
+        .time-box {
+            text-align: center;
+            font-family: 'Sour Gummy';
+            padding: 5px;
+            background-color: #F7941D;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 50px;
+        }
+        
+            .time-value {
+                font-size: 30px;
+                color: #ffffff;
+        }
+        
+            .time-label {
+                font-size: 10px;
+                color: #ffffff;
+                margin-top: -5px;
+        }
+
+        .menu3 h1, .menu4 h1 {
+            font-size: 30px;  /* Ukuran font tetap proporsional */
+            font-family: 'Sigmar';
+            font-weight: normal;
+            color: var(--txt-primary);
+        }
+    
+        .menu3 h5, .menu4 h5 {
+            font-size: 20px;  /* Ukuran font tetap proporsional */
+            font-family: 'Sour Gummy';
+            font-weight: normal;
+            color: var(--txt-secondary);
+        }       
+    }
+    

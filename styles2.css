@@ -1,0 +1,493 @@
+    /* Reset beberapa gaya dasar */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --txt-primary: rgb(255, 152, 0);
+        --txt-secondary: rgb(48, 121, 179);
+        --txt-third: #007c4d;
+    }
+    
+
+    @font-face {
+        font-family: 'Sigmar';
+        src: url('font/Sigmar/Sigmar.ttf') format('truetype'),
+             url('font/Sigmar/Sigmar.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'Sour Gummy';
+        src: url('font/Sour_Gummy/static/SourGummy-Light.ttf') format('truetype'),
+             url('font/Sour_Gummy/static/SourGummy-Light.ttf') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background: linear-gradient(to bottom, #9adfeb, #ffffff); /* Langit biru dan putih */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+
+/* Kontainer utama */
+.container {
+    position: relative;
+    background-image: url("background.jpg");
+    background-size: cover;
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    /* Animasi untuk gambar 1 */
+    .image-1 {
+        position: absolute;
+        width: 100%;
+        top: -100%;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: slideDown 1s forwards;
+    }
+
+    @keyframes slideDown {
+        to {
+            top: 0;
+        }
+    }
+
+    /* Animasi untuk gambar 2 */
+    .image-2 {
+        position: absolute;
+        width: 30%;
+        top: 3px;
+        animation: moveLeftRight 3s ease-in-out infinite;
+    }
+
+    @keyframes moveLeftRight {
+        0% {
+            left: 10px;
+        }
+        50% {
+            left: 20px;
+        }
+        100% {
+            left: 10px;
+        }
+    }
+
+    /* Animasi untuk gambar 3 */
+    .image-3 {
+        position: absolute;
+        width: 35%;
+        top: 3px;
+        animation: moveRightLeft 3s ease-in-out infinite;
+    }
+
+    @keyframes moveRightLeft {
+        0% {
+            right: 0px;
+        }
+        50% {
+            right: 10px;
+        }
+        100% {
+            right: 0px;
+        }
+    }
+
+    /* Animasi untuk gambar 4 */
+    .image-4 {
+        position: absolute;
+        width: 70%;
+        top: 28%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: zoomIn 2s forwards;
+    }
+
+    @keyframes zoomIn {
+        from {
+            transform: translate(-50%, -50%) scale(0);
+        }
+        to {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+
+    /* Animasi untuk gambar 5 */
+    .image-5 {
+        position: absolute;
+        width: 20%;
+        left: -15%;
+        top: 45%;
+        transform: translateY(-50%);
+        animation: slideInLeft 3s forwards;
+    }
+
+    @keyframes slideInLeft {
+        to {
+            left: 0%;
+        }
+    }
+
+    /* Animasi untuk gambar 6 */
+    .image-6 {
+        position: absolute;
+        width: 15%;
+        right: -15%;
+        top: 45%;
+        transform: translateY(-50%);
+        animation: slideInRight 3s forwards;
+    }
+
+    @keyframes slideInRight {
+        to {
+            right: 0%;
+        }
+    }
+
+    /* Animasi untuk gambar 7 */
+    .image-7 {
+        position: absolute;
+        width: 40%;
+        left: -50%;
+        bottom: -10px;
+        animation: slideInLeftBung 3s forwards, swingLeft 6s ease-in-out infinite;
+        transform-origin: bottom;
+    }
+
+    @keyframes slideInLeftBung {
+        to {
+            left: -10%;
+        }
+    }
+
+    @keyframes swingLeft {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(10deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    /* Animasi untuk gambar 8 */
+    .image-8 {
+        position: absolute;
+        width: 40%;
+        right: -50%;
+        bottom: -10px;
+        animation: slideInRightBung 3s forwards, swingRigth 6s ease-in-out infinite;
+        transform-origin: bottom;
+    }
+
+    @keyframes slideInRightBung {
+        to {
+            right: -2%;
+        }
+    }
+
+    @keyframes swingRigth {
+        0% {
+            transform: rotate(10deg);
+        }
+        50% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(10deg);
+        }
+    }
+
+    /* Animasi untuk gambar 9 */
+    .image-9 {
+        position: absolute;
+        width: 100%;
+        bottom: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: slideUp 3s forwards;
+    }
+
+    @keyframes slideUp {
+        to {
+            bottom: 0px;
+        }
+    }
+
+
+    /* Teks */
+
+    .index{
+        position: absolute;
+        z-index: 999;
+        text-align: center;
+    }
+
+    .index h1 {
+        font-size: 15vw;  /* Ukuran font tetap proporsional */
+        font-family: 'Sigmar', sans-serif;
+        font-weight: normal;
+        margin-top: 50px;
+        color: var(--txt-primary);
+    }
+
+    .index h3 {
+        font-size: 8vw;  /* Ukuran font tetap proporsional */
+        font-family: 'Sour Gummy', sans-serif;
+        font-weight: normal;
+        color: var(--txt-secondary);
+        margin-top:-10px;
+        padding-bottom: 10px;
+    }
+
+    .index h5 {
+        font-size: 4vw;  /* Ukuran font tetap proporsional */
+        font-family: 'Sour Gummy', sans-serif;
+        font-weight: normal;
+        color: var(--txt-secondary);
+    }
+
+    .tombolcover {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
+    }
+
+    .tombolbuka{
+        background-color: var(--txt-primary);
+        font-size: 5vw;  /* Ukuran font tetap proporsional */
+        font-family: 'Sour Gummy', sans-serif;
+        font-weight: normal;
+        color: white;
+        padding: 5px 20px 5px 20px;
+        border-radius: 25px;
+        border: none;
+    }
+
+    #recipient-name{
+        font-size: 6vw;  /* Ukuran font tetap proporsional */
+        font-family: 'Sour Gummy', sans-serif;
+        font-weight: normal;
+        color: var(--txt-secondary);
+        text-align: center;
+    }
+
+    
+
+    @media screen and (max-width: 320px) and (min-height: 480px)  {
+        .container{
+            width: 320px;
+        }
+        
+        .image-2 {
+            width: 30vw;
+            z-index: 2;
+        }
+        .image-3 {
+            width: 35vw;
+            z-index: 2;
+        }
+        
+        .image-4 {
+            width: 68vw;
+        }
+        
+        .image-5 {
+            width: 20vw;
+        }
+        
+        .image-6 {
+            width: 15vw;
+        }
+        
+        .image-7 {
+            width: 30vw;
+            margin-top: 20vh;
+            margin-left: 4vw;
+        }
+        .image-8 {
+            width: 30vw;
+            margin-top: 20vh;
+            margin-right: 1vw;
+        }
+
+        .index h1 {
+            font-size: 15vw;  /* Ukuran font tetap proporsional */
+
+        }
+
+        .index h3 {
+            font-size: 7vw;  /* Ukuran font tetap proporsional */
+
+        }
+
+        .index h5 {
+            font-size: 4vw;  /* Ukuran font tetap proporsional */
+        }
+
+        .tombolbuka{
+            font-size: 4vw;  /* Ukuran font tetap proporsional */
+            font-weight: bold;
+        }
+    
+        #recipient-name{
+            font-size: 15px;  /* Ukuran font tetap proporsional */
+        }
+    }
+
+    @media screen and (min-width: 768px)  {
+        .container{
+            width: 768px;
+        }
+
+        .index h1 {
+            font-size: 120px;  /* Ukuran font tetap proporsional */
+
+        }
+
+        .index h3 {
+            font-size: 65px;  /* Ukuran font tetap proporsional */
+
+        }
+
+        .index h5 {
+            font-size: 35px;  /* Ukuran font tetap proporsional */
+        }
+
+        .tombolbuka{
+            font-size: 40px;  /* Ukuran font tetap proporsional */
+        }
+    
+        #recipient-name{
+            font-size: 48px;  /* Ukuran font tetap proporsional */
+        }
+    }
+
+    @media screen and (min-width: 820px)  {
+        .container{
+            width: 768px;
+        }
+
+        .index h1 {
+            font-size: 120px;  /* Ukuran font tetap proporsional */
+
+        }
+
+        .index h3 {
+            font-size: 65px;  /* Ukuran font tetap proporsional */
+
+        }
+
+        .index h5 {
+            font-size: 35px;  /* Ukuran font tetap proporsional */
+        }
+
+        .tombolbuka{
+            font-size: 40px;  /* Ukuran font tetap proporsional */
+        }
+    
+        #recipient-name{
+            font-size: 48px;  /* Ukuran font tetap proporsional */
+        }
+    }
+
+
+    @media screen and (min-width: 1024px) and (max-height: 800px)  {
+        .container{
+            max-width: 400px;
+        }
+        .index{
+            text-align: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .index h1 {
+
+            font-size: 60px;  
+        }
+    
+        .index h3 {
+            font-size: 25px;  
+            margin-bottom: 5px;
+
+        }
+    
+        .index h5 {
+            font-size: 15px;  
+            font-family: 'Sour Gummy', sans-serif;
+            font-weight: normal;
+            color: var(--txt-secondary);
+        }
+       
+        .tombolbuka{
+            font-size: 15px; 
+        }
+    
+        #recipient-name{
+            font-size: 20px;  
+        }
+    }
+
+
+    @media screen and (min-width: 1280px) and (min-height: 720px)  {
+        .container{
+            max-width: 500px;
+        }
+        .index{
+            text-align: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .index h1 {
+
+            font-size: 70px;  
+        }
+    
+        .index h3 {
+            font-size: 30px;  
+            margin-bottom: 5px;
+
+        }
+    
+        .index h5 {
+            font-size: 20px;  
+            font-family: 'Sour Gummy', sans-serif;
+            font-weight: normal;
+            color: var(--txt-secondary);
+        }
+       
+        .tombolbuka{
+            font-size: 20px; 
+        }
+    
+        #recipient-name{
+            font-size: 28px;  
+        }
+    }
+
