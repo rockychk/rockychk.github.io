@@ -1,3 +1,28 @@
+// Tampilkan spinner loading dengan latar putih sebelum halaman dimuat
+document.addEventListener('DOMContentLoaded', function () {
+    // Tambahkan elemen spinner ke dalam body
+    const spinnerOverlay = document.createElement('div');
+    spinnerOverlay.id = 'spinner-overlay';
+    spinnerOverlay.innerHTML = `
+        <div class="spinner">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden"></span>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(spinnerOverlay);
+});
+
+// Sembunyikan spinner setelah semua konten selesai dimuat
+window.addEventListener('load', function () {
+    const spinnerOverlay = document.getElementById('spinner-overlay');
+    if (spinnerOverlay) {
+        spinnerOverlay.style.opacity = '0';
+        setTimeout(() => spinnerOverlay.remove(), 500); // Hapus elemen setelah animasi selesai
+    }
+});
+
+
 // AWAL TAMU UNDANGAN
 // Mengecek apakah nama tamu sudah disimpan di LocalStorage
 const savedRecipientName = localStorage.getItem('kepada');
@@ -41,20 +66,8 @@ function togglePlayPause() {
     }
 }
 
-
-
-
 // Menampilkan kontainer pertama saat halaman dimuat dan memutar musik secara otomatis
 window.onload = function() {
-
-/* SEMBUNYIKAN SPINNER */
-// Setelah seluruh halaman dan data dimuat, sembunyikan spinner
-window.addEventListener('load', function() {
-    // Sembunyikan spinner setelah konten halaman selesai dimuat
-    document.getElementById('spinner').style.display = 'none';
-});
-
-
     // Memulai pemutaran musik secara otomatis
     audio.play();
     playPauseIcon.classList.remove('bi-play-circle');
