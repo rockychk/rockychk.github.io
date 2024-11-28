@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="spinner-border text-primary" role="status">
                 <span class="visually-hidden"></span>
             </div>
+            <span class="spinner-text">Halaman sedang dimuat...</span>
         </div>
     `;
     document.body.appendChild(spinnerOverlay);
