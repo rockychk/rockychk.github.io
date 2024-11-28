@@ -666,11 +666,19 @@ html, body {
 }
 
 .spinner {
-    position: fixed;
     display: flex;
+    flex-direction: column; /* Tumpuk elemen secara vertikal */
     justify-content: center;
     align-items: center;
     background-color: white;
+}
+
+.spinner .spinner-text {
+    margin-top: 10px; /* Jarak antara teks dan spinner */
+    font-size: 16px;
+    font-weight: 500;
+    color: #000; /* Warna teks hitam */
+    text-align: center;
 }
 
 #btnClosePopup {
